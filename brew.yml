@@ -1,0 +1,65 @@
+---
+- name: "Install Homebrew packages"
+  hosts: localhost
+  vars:
+    brew_packages:
+      - 'clojure'
+      - 'coreutils'
+      - 'ctags'
+      - 'emacs'
+      - 'gist'
+      - 'git'
+      - 'leiningen'
+      - 'maven'
+      - 'node'
+      - 'python3'
+      - 'ruby'
+      - 'tmux'
+      - 'trash'
+      - 'tree'
+      - 'unzip'
+      - 'wget'
+      - 'zsh'
+    cask_packages:
+      - 'alfred'
+      - 'dash'
+      - 'flux'
+      - 'flycut'
+      - 'google-chrome'
+      - 'intellij-idea'
+      - 'iterm2'
+      - 'slack'
+      - 'steam'
+      - 'spotify'
+      - 'sublime-text'
+      - 'visual-studio-code'
+      - 'vlc'
+
+  pre_tasks:
+    - name: Homebrew installation check
+      stat:
+        path: "/usr/local/bin/brew"
+      register: homebrew_check
+
+    - name: Install homebrew
+      command: '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+      when: >
+        not homebrew_check.stat.exists
+
+  tasks:
+    - name: Updating Homebrew
+      homebrew:
+        update_homebrew: true
+      when: homebrew_check.stat.exists
+
+    - name: Installing Homebrew Packages
+      homebrew:
+        name: "{{ brew_packages }}"
+        state: "present"
+      when: homebrew_check.stat.exists
+
+    - name: Installing Homebrew Cask Packages
+      homebrew_cask:
+        name: "{{ cask_packages }}"
+        state: "present"
+      when: homebrew_check.stat.exists
