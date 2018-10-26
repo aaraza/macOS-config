@@ -1,0 +1,13 @@
+[user]
+	name = Ali Raza
+	email = aaraza1995@gmail.com
+[color]
+	ui = auto
+[core]
+	autocrlf = input
+	editor = vim
+	excludesfile = /Users/ali/.gitignore
+[pull]
+	rebase = true
+[github]
+	user = aaraza

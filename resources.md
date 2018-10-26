@@ -3,3 +3,4 @@
 - https://gist.github.com/mrlesmithjr/f3c15fdd53020a71f55c2032b8be2eda#file-ansible-macos-homebrew-packages-yml
 - https://github.com/geerlingguy/ansible-role-homebrew
 - https://github.com/geerlingguy/mac-dev-playbook/blob/master/main.yml
+- https://stackoverflow.com/questions/36696952/copy-multiple-files-with-ansible
