@@ -1,0 +1,6 @@
+---
+- name: Run all playbooks
+  hosts: localhost
+
+- import_playbook: brew.yml
+- import_playbook: dotfiles.yml
