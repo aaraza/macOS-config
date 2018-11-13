@@ -1,0 +1,37 @@
+---
+- name: "Add frequently used applications to the dock"
+  hosts: localhost
+  vars:
+    dockitems_to_remove:
+      - Mail
+      - Safari
+      - Contacts
+      - Notes
+      - Reminders
+      - Maps
+      - Photos
+      - Messages
+      - FaceTime
+      - iTunes
+      - iBooks
+      - App Store
+      - System Preferences
+      - Calendar
+    dockitems_to_persist:
+      - name: Spotify
+        path: "/Applications/Spotify.app/"
+      - name: iTerm
+        path: "/Applications/iTerm.app/"
+      - name: Google Chrome
+        path: "/Applications/Google\ Chrome.app/"
+      - name: Visual Studio Code
+        path: "/Applications/Visual\ Studio\ Code.app/"
+
+  tasks:
+    - name: Remove applications docked by default
+      shell: dockutil --remove '{{ item }}'
+      ignore_errors: true
+      with_items: "{{ dockitems_to_remove }}"
+    - name: Add applications to dock
+      shell: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }}'
+      with_items: "{{dockitems_to_persist}}"
