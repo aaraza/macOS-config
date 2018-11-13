@@ -5,6 +5,7 @@
     brew_packages:
       - 'clojure'
       - 'coreutils'
+      - 'cmake'
       - 'ctags'
       - 'dockutil'
       - 'emacs'

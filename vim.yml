@@ -10,3 +10,6 @@
 
     - name: Install plugins
       command: vim +PluginInstall +qall
+
+    - name: Install You Complete Me
+      command: sh /Users/ali/.vim/bundle/YouCompleteMe/install.sh
