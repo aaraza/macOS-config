@@ -3,6 +3,10 @@
   hosts: localhost
 
   tasks:
+    - name: Add ZSH to shells
+      shell: echo $(which zsh) >> /etc/shells
+      become: yes
+
     - name: Make ZSH default shell
       shell: chsh -s $(which zsh)
 
