@@ -4,5 +4,5 @@
 
 - import_playbook: brew.yml
 - import_playbook: dock.yml
-- import_playbook: zsh.yml
+- import_playbook: shell.yml
 - import_playbook: dotfiles.yml
