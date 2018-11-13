@@ -19,7 +19,7 @@ git clone https://github.com/aaraza/setup.git
 
 ### Running the main playbook
 ```
-ansible-playbook main.yml
+ansible-playbook main.yml -K
 ```
 
 ## Built With
