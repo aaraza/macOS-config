@@ -1,0 +1,15 @@
+---
+- name: "Configure vim"
+  hosts: localhost
+
+  tasks:
+    - name: Install vundle
+      git:
+        repo: https://github.com/VundleVim/Vundle.vim.git
+        dest: /Users/ali/.vim/bundle/Vundle.vim
+
+    - name: Install plugins
+      shell: yes '' | vim +PluginInstall +qall
+
+    - name: Install You Complete Me
+      command: sh /Users/ali/.vim/bundle/YouCompleteMe/install.sh

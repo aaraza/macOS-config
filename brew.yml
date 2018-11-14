@@ -5,6 +5,7 @@
     brew_packages:
       - 'clojure'
       - 'coreutils'
+      - 'cmake'
       - 'ctags'
       - 'dockutil'
       - 'emacs'
@@ -19,6 +20,7 @@
       - 'trash'
       - 'tree'
       - 'unzip'
+      - 'vim'
       - 'wget'
       - 'zsh'
     cask_packages:
