@@ -26,4 +26,4 @@
       command: rm -rf /Users/ali/fonts
 
     - name: Copy iTerm preferences
-      command: cp preferences/com.googlecode.iterm2.plist /Users/ali/Library/Preferences/
+      command: cp ../preferences/com.googlecode.iterm2.plist /Users/ali/Library/Preferences/

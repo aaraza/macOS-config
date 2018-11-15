@@ -1,0 +1,17 @@
+---
+- name: "Configure python development environment"
+  hosts: localhost
+
+  tasks:
+    - name: Get latest stable python version
+      shell: pyenv  install -l | grep -v - | tail -1 | tr -d '[[:space:]]'
+      register: python_version
+
+    - name: Set Python version
+      set_fact: python_version={{ python_version.stdout }}
+
+    - name: Install latest stable python
+      shell: pyenv install {{ python_version }}
+
+    - name: Set default python
+      shell: pyenv global {{ python_version }}
