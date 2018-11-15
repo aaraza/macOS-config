@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Installs pip and Ansible
+
+curl https://bootstrap.pypa.io/get-pip.py | python
+pip install ansible
