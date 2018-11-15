@@ -14,7 +14,7 @@
       - 'leiningen'
       - 'maven'
       - 'node'
-      - 'python3'
+      - 'pyenv'
       - 'ruby'
       - 'tmux'
       - 'trash'
