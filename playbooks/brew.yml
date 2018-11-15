@@ -15,7 +15,7 @@
       - 'maven'
       - 'node'
       - 'pyenv'
-      - 'ruby'
+      - 'rbenv'
       - 'tmux'
       - 'trash'
       - 'tree'

@@ -20,3 +20,4 @@ alias gl="git log"
 date
 ls
 eval "$(pyenv init -)"
+eval "$(rbenv init -)"
