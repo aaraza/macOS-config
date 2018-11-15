@@ -7,10 +7,12 @@ Automated development environment setup for OS X.
 Follow these instructions to install all requirements and run the setup.
 
 ### Prerequisites 
-- Install Command line tools: `xcode-select --install`
-- Install Pip: `sudo easy_install pip`
-    - See [this](https://stackoverflow.com/questions/49825743/easy-install-pip-fails-on-mac-osx) post to troubleshoot pip installation
-- Install Ansible: `pip install ansible`
+In order to run this project we need OS-X Command Line Tools and Ansible:
+```
+xcode-select --install
+curl https://bootstrap.pypa.io/get-pip.py | sudo python
+sudo pip install ansible
+```
 
 ### Cloning This Repo
 ```
