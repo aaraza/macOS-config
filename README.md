@@ -6,21 +6,13 @@ Automated development environment setup for OS X.
 
 Follow these instructions to install all requirements and run the setup.
 
-### Prerequisites 
+### Installing Prerequisites and Running the Main Playbook 
 In order to run this project we need OS-X Command Line Tools and Ansible:
 ```
 xcode-select --install
-curl https://bootstrap.pypa.io/get-pip.py | sudo python
-sudo pip install ansible
-```
-
-### Cloning This Repo
-```
 git clone https://github.com/aaraza/setup.git
-```
-
-### Running the main playbook
-```
+cd setup
+sudo sh setup
 ansible-playbook main.yml -K
 ```
 
