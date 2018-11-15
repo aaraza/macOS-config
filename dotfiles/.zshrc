@@ -19,3 +19,4 @@ alias gl="git log"
 # Startup Commands
 date
 ls
+eval "$(pyenv init -)"
