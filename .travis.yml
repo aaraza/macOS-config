@@ -1,0 +1,20 @@
+---
+sudo: required
+language: objective-c
+osx_image: xcode9.3
+
+Remove Homebrew:
+  - curl -sLO https://raw.githubusercontent.com/Homebrew/install/master/uninstall
+  - chmod +x ./uninstall
+  - ./uninstall --force
+  - sudo rm -rf /usr/local/Homebrew
+  - sudo rm -rf /usr/local/Caskroom
+  - sudo rm -rf /usr/local/bin/brew
+
+install:
+  - sudo easy_install pip
+  - sudo pip install ansible
+
+script:
+  - "ansible-playbook main.yml --syntax-check"
+  - "ansible-playbook main.yml"
