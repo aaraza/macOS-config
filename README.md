@@ -1,4 +1,5 @@
 # Setup
+![Build Status](https://travis-ci.com/aaraza/setup.svg?branch=dev)
 
 Automated development environment setup for OS X.
 
