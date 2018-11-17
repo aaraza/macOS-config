@@ -9,3 +9,4 @@
 - import_playbook: playbooks/vim.yml
 - import_playbook: playbooks/python.yml
 - import_playbook: playbooks/ruby.yml
+- import_playbook: playbooks/settings.yml
