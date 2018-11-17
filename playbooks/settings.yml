@@ -25,7 +25,9 @@
       shell: defaults write NSGlobalDomain KeyRepeat -int 1
 
     - name: Make screenshots folder
-      shell: mkdir ~/Screenshots
+      file: 
+        path: ~/Screenshots
+        state: directory
 
     - name: Set screenshots folder
       shell: defaults write com.apple.screencapture location -string "~/Screenshots"
