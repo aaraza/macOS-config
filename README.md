@@ -1,5 +1,7 @@
 # Setup
 ![Build Status](https://travis-ci.com/aaraza/setup.svg?branch=dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 Automated development environment setup for OS X.
 
