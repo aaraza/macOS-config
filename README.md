@@ -1,5 +1,7 @@
 # Setup
-![Build Status](https://travis-ci.com/aaraza/setup.svg?branch=dev)
+
+[![Setup](https://img.shields.io/badge/aaraza-setup-blue.svg)](http://github.com/aaraza/setup)
+[![Build Status](https://travis-ci.com/aaraza/setup.svg?branch=dev)](https://travis-ci.com/aaraza/setup)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
