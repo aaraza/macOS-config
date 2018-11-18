@@ -12,4 +12,4 @@
       shell: yes '' | vim +PluginInstall +qall
 
     - name: Install You Complete Me
-      command: sh ~/.vim/bundle/YouCompleteMe/install.sh
+      shell: sh ~/.vim/bundle/YouCompleteMe/install.sh
