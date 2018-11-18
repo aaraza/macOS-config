@@ -1,0 +1,12 @@
+---
+- name: Run all playbooks
+  hosts: localhost
+
+- import_playbook: playbooks/brew.yml
+- import_playbook: playbooks/shell.yml
+- import_playbook: playbooks/dock.yml
+- import_playbook: playbooks/dotfiles.yml
+- import_playbook: playbooks/vim.yml
+- import_playbook: playbooks/python.yml
+- import_playbook: playbooks/ruby.yml
+- import_playbook: playbooks/settings.yml
