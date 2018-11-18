@@ -21,10 +21,10 @@
         dest: ~/fonts
 
     - name: Install powerline fonts
-      command: sh ~/fonts/install.sh
+      shell: sh ~/fonts/install.sh
 
     - name: Delete powerline fonts repo
-      command: rm -rf ~/fonts
+      shell: rm -rf ~/fonts
 
     - name: Copy iTerm preferences
-      command: cp ../preferences/com.googlecode.iterm2.plist ~/Library/Preferences/
+      shell: cp ../preferences/com.googlecode.iterm2.plist ~/Library/Preferences/
