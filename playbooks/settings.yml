@@ -3,27 +3,6 @@
   hosts: localhost
 
   tasks:
-    - name: Disable Game Center
-      shell: launchctl unload /System/Library/LaunchAgents/com.apple.gamed.plist 2> /dev/null
-
-    - name: Disable smart quotes
-      shell: defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-
-    - name: Disable smart dashes
-      shell: defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-
-    - name: Set background
-      shell: osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Library/Desktop Pictures/Solid Colors/Solid Gray Dark.png"'
-
-    - name: Disable press and hold keys
-      shell: defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-
-    - name: Set key repeat
-      shell: defaults write NSGlobalDomain InitialKeyRepeat -int 20
-
-    - name: Set key repeat
-      shell: defaults write NSGlobalDomain KeyRepeat -int 1
-
     - name: Make screenshots folder
       file: 
         path: ~/Screenshots
