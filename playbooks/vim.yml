@@ -12,4 +12,4 @@
       shell: yes '' | vim +PluginInstall +qall
 
     - name: Install You Complete Me
-      shell: sh ~/.vim/bundle/YouCompleteMe/install.sh
+      shell: python3 ~/.vim/bundle/YouCompleteMe/install.py --all

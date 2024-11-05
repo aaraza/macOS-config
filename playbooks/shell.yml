@@ -1,19 +1,9 @@
 ---
-- name: "Configure ZSH as default shell"
+- name: "Install Oh My ZSH"
   hosts: localhost
-
   tasks:
-    - name: Add ZSH to shells
-      shell: echo $(which zsh) >> /etc/shells
-      become: yes
-
-    - name: Make ZSH default shell
-      shell: chsh -s $(which zsh)
-      become: yes
-
     - name: Install Oh My ZSH
-      shell: sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-      become: yes
+      shell: sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
     - name: Clone powerline fonts repo
       git:
@@ -26,5 +16,27 @@
     - name: Delete powerline fonts repo
       shell: rm -rf ~/fonts
 
-    - name: Copy iTerm preferences
-      shell: cp ../preferences/com.googlecode.iterm2.plist ~/Library/Preferences/
+- name: "Configure terminal profile"
+  hosts: localhost
+  tasks:
+    - name: Copy .terminal profile to user directory
+      copy:
+        src: ../OhMyZSH.terminal  # Path to your .terminal file
+        dest: ~/Library/Preferences/OhMyZSH.terminal  # Destination for Terminal to recognize it
+        mode: '0644'
+    
+    - name: Import Terminal profile with AppleScript
+      shell: |
+        osascript <<EOF
+        tell application "Terminal"
+          do shell script "open '~/Library/Preferences/OhMyZSH.terminal'"
+        end tell
+        EOF
+    
+    - name: Set imported profile as default in Terminal
+      shell: |
+        osascript <<EOF
+        tell application "Terminal"
+          set default settings to settings set "OhMyZSH"
+        end tell
+        EOF
