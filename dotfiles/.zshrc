@@ -19,11 +19,11 @@ alias gb="git branch"
 alias gs="git status"
 alias gl="git log"
 alias ll="ls -la"
+alias gbd="git branch | xargs git branch -D"
 
 # Startup Commands
 date
 ls
 
 # Path
-export PATH="/opt/homebrew/anaconda3/bin:$PATH"
 export PATH="$HOME/bin:$PATH"

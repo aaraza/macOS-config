@@ -17,3 +17,9 @@ venv
 node_modules
 .sass-cache
 .vscode/
+.ipynb_checkpoints/
+*.ipynb
+**/.coverage
+build
+dist
+*.egg-info
