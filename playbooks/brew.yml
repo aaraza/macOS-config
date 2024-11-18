@@ -15,12 +15,11 @@
       - 'tree'
       - 'unar'
       - 'vim'
+      - 'virtualenv'
       - 'wget'
     cask_packages:
-      - 'anaconda'
       - 'calibre'
       - 'google-chrome'
-      - 'intellij-idea'
       - 'obsidian'
       - 'protonvpn'
       - 'tor-browser'

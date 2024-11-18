@@ -40,3 +40,11 @@
           set default settings to settings set "OhMyZSH"
         end tell
         EOF
+
+- name: "Create local bin"
+  hosts: localhost
+  tasks:
+    - name: Create bin directory in HOME repo
+      file:
+        path: "{{ ansible_env.HOME }}/bin"
+        state: directory
