@@ -3,6 +3,7 @@
   hosts: localhost
 
 - import_playbook: playbooks/brew.yml
+- import_playbook: playbooks/python.yml
 - import_playbook: playbooks/shell.yml
 - import_playbook: playbooks/dock.yml
 - import_playbook: playbooks/dotfiles.yml

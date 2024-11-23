@@ -3,13 +3,13 @@
   hosts: localhost
   vars:
     brew_packages:
-      - 'cmake'
+      - 'cmake' #needed for this project?
       - 'dockutil'
       - 'gcc'
-      - 'go'
+      - 'go' #needed for this project??
       - 'java'
-      - 'npm'
-      - 'python3'
+      - 'npm' #needed for this project?
+      - 'pyenv' #need to configure setup in a seperate playbook
       - 'tmux'
       - 'trash'
       - 'tree'
@@ -19,6 +19,7 @@
       - 'wget'
     cask_packages:
       - 'calibre'
+      - 'docker'
       - 'google-chrome'
       - 'obsidian'
       - 'protonvpn'

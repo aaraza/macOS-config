@@ -1,0 +1,14 @@
+---
+- name: Configure python using pyenv
+  hosts: localhost
+  tasks:
+    - name: Init pyenv
+      shell: |
+        eval "$(pyenv init --path)"
+        eval "$(pyenv init -)"
+
+    - name: Install python 3.12
+      shell: pyenv install 3.12.0
+
+    - name: Set pyenv python 3.12 as default python
+      shell: pyenv global 3.12.0
