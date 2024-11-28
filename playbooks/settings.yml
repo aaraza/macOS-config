@@ -5,17 +5,19 @@
   tasks:
     - name: Make screenshots folder
       file: 
-        path: ~/Screenshots
+        path: ~/Pictures/Screenshots
         state: directory
 
     - name: Set screenshots folder
-      shell: defaults write com.apple.screencapture location -string "~/Screenshots"
+      shell: defaults write com.apple.screencapture location -string "~/Pictures/Screenshots"
 
     - name: Show status bar in finder
-      shell: defaults write com.apple.finder ShowStatusBar -bool true
+      shell: |
+        defaults write com.apple.finder ShowStatusBar -bool true
+        defaults write com.apple.finder ShowPathbar -bool true
 
-    - name: Show path in finder
-      shell: defaults write com.apple.finder ShowPathbar -bool true
-
-    - name: Use plain text mode for textedit
-      shell: defaults write com.apple.TextEdit RichText -int 0
+    - name: Configure TextEdit
+      shell: |
+        defaults write com.apple.TextEdit NSDocumentSaveNewDocumentsToCloud -bool false
+        defaults write com.apple.TextEdit NSShowSavePanelWhenOpeningNewDocument -bool false
+        defaults write com.apple.TextEdit RichText -int 0
