@@ -29,7 +29,7 @@
       shell: |
         osascript <<EOF
         tell application "Terminal"
-          do shell script "open '~/Library/Preferences/OhMyZSH.terminal'"
+          do shell script "open '~/Library/Preferences/Pro.terminal'"
         end tell
         EOF
     
@@ -37,7 +37,7 @@
       shell: |
         osascript <<EOF
         tell application "Terminal"
-          set default settings to settings set "OhMyZSH"
+          set default settings to settings set "Pro"
         end tell
         EOF
 
