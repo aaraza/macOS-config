@@ -18,7 +18,7 @@ alias gd="git diff"
 alias gb="git branch"
 alias gs="git status"
 alias gl="git log"
-alias ll="ls -la"
+alias ll="ls -l"
 alias gbd="git branch | xargs git branch -D"
 
 # Startup Commands
