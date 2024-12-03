@@ -41,6 +41,9 @@
         end tell
         EOF
 
+    - name: Copy Customized Theme
+      shell: cp ../config/agnoster.zsh-theme ~/.oh-my-zsh/themes/agnoster.zsh-theme
+
 - name: "Create local bin"
   hosts: localhost
   tasks:
