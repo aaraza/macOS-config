@@ -3,10 +3,14 @@
   hosts: localhost
   vars:
     dockitems_to_remove:
-      - Mail
       - Contacts
       - Maps
-      - Calendar
+      - Photos
+      - FaceTime
+      - Notes
+      - Music
+      - Podcasts
+      - App Store
     dockitems_to_persist:
       - name: Obsidian
         path: "/Applications/Obsidian.app/"
@@ -22,3 +26,6 @@
     - name: Add applications to dock
       shell: dockutil --add "{{ item.path }}"
       with_items: "{{dockitems_to_persist}}"
+
+    - name: Disable app suggestions in the dock
+      shell: defaults write com.apple.dock show-recents -bool false && killall Dock
