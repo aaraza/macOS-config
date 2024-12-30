@@ -21,3 +21,5 @@
         defaults write com.apple.TextEdit NSDocumentSaveNewDocumentsToCloud -bool false
         defaults write com.apple.TextEdit NSShowSavePanelWhenOpeningNewDocument -bool false
         defaults write com.apple.TextEdit RichText -int 0
+        defaults write com.apple.TextEdit SmartQuotes -bool false
+        defaults write com.apple.TextEdit SmartDashes -bool false
